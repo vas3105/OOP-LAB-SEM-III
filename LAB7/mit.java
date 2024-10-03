@@ -3,7 +3,7 @@ class student_details
 {
     int id;
     String name;
-    static String clg_name="MIT";
+    final String clg_name="MIT";
     void init()
     {
         this.id=0;
