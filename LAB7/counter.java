@@ -4,7 +4,7 @@ class count
 {
   //int c1=0;
   static int c2=0;
-  void add1()
+  count()
   {
    // c1++;
     c2++;
@@ -21,9 +21,6 @@ public class counter {
        count s=new count();
        count s1=new count();
        count s2=new count();
-       s.add1();
-       s1.add1();
-       s2.add1();
        s.display();
       
     }
