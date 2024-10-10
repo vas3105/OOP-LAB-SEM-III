@@ -11,10 +11,10 @@ class rectangle implements compute{
     }
 }
 class circle implements compute{
-    public void findarea(int r,int b)          //using abstract class
+    public void findarea(int r,int b)          //using interface class
     {
         double ans = 3.14157*r*r;  //area of circle
-        System.out.println("the area of rectangle ="+ans);
+        System.out.println("the area of circle ="+ans);
     }
 }
 public class final_area3 {
