@@ -4,12 +4,12 @@ class student_details
     int id;
     String name;
     final String clg_name="MIT";
-    void init()
+    student_details()
     {
         this.id=0;
         
     }
-    void init(int id,String name)
+    student_details(String name,int id)  //constructors to initialize
     {
         this.id=id;
         this.name=name;
@@ -35,11 +35,11 @@ public class mit {
         System.out.println("enter the id 2");
         int id2=sc.nextInt();
         //initialize 1st student
-        student_details s1=new student_details();
-        s1.init(id1, name);
+        student_details s1=new student_details(name,id1);
+        
         //initialize 2nd student
-        student_details s2=new student_details();
-        s2.init(id2, name1);
+        student_details s2=new student_details(name1,id2);
+       
         s1.display();
         s2.display();
         sc.close();
