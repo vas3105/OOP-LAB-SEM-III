@@ -5,7 +5,7 @@ abstract class compute
 }
  class rectangle extends compute{
  int a,b;
-    void rectangle(int a,int b)    //initialize the variables
+  rectangle(int a,int b)    //initialize the variables
  {
     this.a=a;
     this.b=b;
@@ -18,15 +18,15 @@ abstract class compute
 }
  class circle extends compute{
     int r;
-    void compute(int a)      //initialize the variables
+    circle(int r)      //initialize the variables
     
     {
-        this.r=a;
+        this.r=r;
     }
     void findarea()          //using abstract class
     {
         double ans = 3.14157*r*r; //compute area of circle
-        System.out.println("the area of rectangle ="+ans);
+        System.out.println("the area of circle ="+ans);
     }
 }
 class area
@@ -37,13 +37,13 @@ class area
         int l =sc.nextInt();
         System.out.println("enter the breadth of rectangle");
         int b =sc.nextInt();
-        rectangle r1 =new rectangle();   //create an object for rectangle
-        r1.rectangle(l,b);
+        rectangle r1 =new rectangle(l,b);   //create an object for rectangle
+      
         r1.findarea();
         System.out.println("enter the radius of the circle");
         int radius= sc.nextInt();
-        circle c1=new circle(); //create an object for circle
-        c1.compute(radius);
+        circle c1=new circle(radius); //create an object for circle
+
         c1.findarea(); //call the abstract class
         sc.close();
     }
