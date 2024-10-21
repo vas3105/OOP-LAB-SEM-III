@@ -18,7 +18,9 @@ public class q1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int c = 1;
-
+        try {
+            
+       
         while (true) {
             System.out.println("\nCreate thread through: ");
             System.out.println("1. Runnable interface");
@@ -33,12 +35,14 @@ public class q1 {
                     Trial t = new Trial();
                     Thread z = new Thread(t);
                     z.start();
+                    z.join();
                     break;
 
                 case 2:
                     // Create thread by inheriting Thread class
                     World w = new World();
                     w.start();
+                    w.join();
                     break;
 
                 case 3:
@@ -51,5 +55,8 @@ public class q1 {
                     break;
             }
         }
+    } catch (InterruptedException e) {
+        // TODO: handle exception
+        e.printStackTrace();
     }
-}
+}}
