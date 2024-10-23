@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 class outofbounds {
@@ -6,8 +7,8 @@ class outofbounds {
         int[] arr = new int[3];
         int le = 0, ch = 0;
 
-        while (ch != 4) {  // Loop will continue until the user chooses to exit
-            System.out.println("1. Add 2. Delete element 3. Display 4. Exit");
+        while (ch<3) {  // Loop will continue until the user chooses to exit
+            System.out.println("1. Add 2.  Display 3. Exit");
             ch = sc.nextInt();
             
             switch (ch) {
@@ -23,15 +24,6 @@ class outofbounds {
                     break;
 
                 case 2:
-                    if (le > 0) {
-                        le--;
-                        System.out.println("Deleted the last element");
-                    } else {
-                        System.out.println("No elements to delete");
-                    }
-                    break;
-
-                case 3:
                     System.out.println("Array contents:");
                     for (int i = 0; i < le; i++) {
                         System.out.print(arr[i] + "\t");
@@ -39,7 +31,7 @@ class outofbounds {
                     System.out.println(); // Move to next line after displaying
                     break;
 
-                case 4:
+                case 3:
                     System.out.println("Exiting...");
                     break;
 
